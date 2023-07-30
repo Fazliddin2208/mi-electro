@@ -17,7 +17,7 @@ const Cards = () => {
 
     const arr = []
     const getPrayTimeByCity = async () => {
-        axios.get(`http://api.aladhan.com/v1/timingsByCity?city=${location}&country=Uzbekistan&method=8`)
+        axios.get(`http://api.aladhan.com/v1/timingsByCity?city=${location ? location : 'Tashkent'}&country=Uzbekistan&method=8`)
             .then(res => {
                 const data = res.data.data.timings
                 arr.push({name:'Bomdod', time:data.Fajr})
