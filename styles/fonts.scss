@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: local('Jost'),
+        url('../fonts/Jost-medium.ttf') format('truetype');
+        unicode-range: U+000-5FF; 
+}
+
+%font_normal{
+    font-family: 'Jost';
+    font-weight: 400;
+}

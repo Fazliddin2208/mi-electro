@@ -1,0 +1,102 @@
+@import './fonts.scss';
+@import './constants.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../public/images/Background.png) no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+    @extend %font_normal;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #a2a1a1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #13003C; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.city {
+    border: 1px solid $main_color;
+    background: transparent;
+    color: $main_color;
+    width: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+
+    &.active{
+        span{
+            transform: rotate(270deg);
+        }
+    }
+    span{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 30px;
+        color: #13003C;
+        background-color: #fff;
+        margin-left: auto;
+        transform: rotate(90deg);
+        
+    }
+}
+
+.city-select{
+    width: 228px;
+    height: 250px;
+    overflow: auto;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 320px;
+    background-color: rgba(255, 255, 255, 0.70);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+    &.active{
+        display: flex;
+    }
+
+    p{
+        margin: 0;
+        padding: 5px;
+        color: #13003C;
+        cursor: pointer;
+        &:hover{
+            background-color: #fff;
+        }
+    }
+}
+
+.text-yellow{
+    color: #FFC700;
+}
