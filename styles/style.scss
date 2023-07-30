@@ -1,5 +1,15 @@
-@import './fonts.scss';
+// @import './fonts.scss';
 @import './constants.scss';
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: local('Jost'),
+        url('./../fonts/Jost-medium.ttf') format('truetype');
+        unicode-range: U+000-5FF; 
+}
 
 body {
     margin: 0;
@@ -8,7 +18,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     color: #fff;
-    @extend %font_normal;
+    font-family: Jost;
 }
 
 ::-webkit-scrollbar {
